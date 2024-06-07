@@ -3,7 +3,7 @@
   "scripts": {
     "lint": "eslint --fix",
     "format": "prettier --write .",
-    "test": "playwright test tests/*",
+    "test": "playwright test index.test.js",
     "lint:watch": "nodemon --watch . --exec \"npm run lint && npm run format\"",
     "test:watch": "nodemon --watch . --exec \"npm run lint && npm run format && npm run test\"",
     "start": "node -e \"import('./index.js').then(({ main }) => main())\""
