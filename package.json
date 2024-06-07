@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "scripts": {
+    "lint": "eslint --fix",
+    "format": "prettier --write .",
+    "test": "playwright test tests/*",
+    "lint:watch": "nodemon --watch . --exec \"npm run lint && npm run format\"",
+    "test:watch": "nodemon --watch . --exec \"npm run lint && npm run format && npm run test\"",
+    "start": "node -e \"import('./index.js').then(({ main }) => main())\""
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "eslint": "^9.4.0",
+    "nodemon": "^3.1.3",
+    "prettier": "^3.3.1"
+  }
+}
